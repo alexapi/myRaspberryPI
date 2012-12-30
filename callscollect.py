@@ -71,7 +71,7 @@ if len(myline) < 80 or myline.find("Ext.") != -1 or myline.find("-") != -1:
 if lerror == 0:
     myline = parse_line(myline)
     print myline
-    pbxdb = sqlite3.connect("/tmp/pbxcollect.db")
+    pbxdb = sqlite3.connect("/var/www/pbxcollect.db")
     curs = pbxdb.cursor()
     # Create new table
     #curs.execute("CREATE TABLE calls (cday integer(2) NOT NULL, cmonth integer(2) NOT NULL, cyear integer(4) NOT NULL, transfer text(1) NOT NULL, ctime text(5) NOT NULL, intline text(3) NOT NULL, coline text(2) NOT NULL, phonenum text(12) NOT NULL, colduration integer(5) NOT NULL, colcode text(4) NOT NULL)")
